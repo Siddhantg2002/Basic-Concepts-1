@@ -1,0 +1,68 @@
+import sys
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import random
+font1 = {'family':'serif','color':'blue','size':20}
+font2 = {'family':'serif','color':'darkred','size':15}
+#PLOT 1
+x1=random.randint(25,size=(5))
+y1=random.randint(25,size=(5))
+x2=random.randint(25,size=(5))
+y2=random.randint(25,size=(5))
+plt.subplot(2,3,1)
+plt.xlabel("MUSCLE MASS",loc='left')
+plt.ylabel("TIME")
+plt.title("POWER",fontdict=font1)
+plt.grid()
+plt.plot(x1,y1)
+plt.plot(x2,y2)
+#PLOT 2
+x=random.randint(100,size=(5))
+y=random.randint(100,size=(5))
+plt.subplot(2,3,2)
+plt.xlabel("MASS",loc='left')
+plt.ylabel("TIME")
+plt.title("MUSCLE HYPERTROPHY",fontdict=font1)
+plt.grid(axis='x',color='green',ls='dotted')
+plt.plot(x,y,marker='o',mec='black',ms=5,mfc='hotpink',lw=2,ls='dotted',color='red')
+#PLOT 3
+x=random.randint(100,size=(5))
+y=random.randint(100,size=(5))
+plt.subplot(2,3,3)
+plt.xlabel("MUSCLE MASS",loc='left')
+plt.ylabel("TIME")
+plt.title("LOSS",fontdict=font1)
+plt.grid(axis='y',color='blue',ls='dotted')
+plt.plot(x,y,marker='*',mec='black',ms=5,mfc='red',lw=2,ls='dashed',color='red')
+#PLOT 4
+x=random.randint(100,size=(5))
+y=random.randint(100,size=(5))
+plt.subplot(2,3,4)
+plt.xlabel("MUSCLE MASS")
+plt.ylabel("TIME")
+plt.title("RECOVERY",loc='right',fontdict=font1)
+plt.grid(axis='y',color='blue',ls='dotted')
+plt.plot(x,y,marker='*',mec='black',ms=5,mfc='red',lw=2,ls='dashed',color='red')
+plt.plot(x,y)
+#PLOT 5
+x=random.randint(100,size=(5))
+y=random.randint(100,size=(5))
+plt.subplot(2,3,5)
+plt.xlabel("MUSCLE MASS")
+plt.ylabel("TIME")
+plt.title("STRENGTH",loc='right',fontdict=font1)
+plt.grid(axis='y',color='blue',ls='dotted')
+plt.plot(x,y,marker='*',mec='black',ms=5,mfc='red',lw=2,ls='dashed',color='red')
+plt.plot(x,y)
+#PLOT 6
+x=random.randint(100,size=(5))
+y=random.randint(100,size=(5))
+plt.subplot(2,3,6)
+plt.xlabel("MUSCLE MASS")
+plt.ylabel("TIME")
+plt.title("GROWTH",loc='right',fontdict=font1)
+plt.grid(axis='y',color='blue',ls='dotted')
+plt.plot(x,y,marker='*',mec='black',ms=5,mfc='red',lw=2,ls='dashed',color='red')
+plt.plot(x,y)
+plt.suptitle("MUSCLE VS TIME HYPERTROPHY",fontdict=font2)
+plt.show()
